@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.main-page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,7 +12,7 @@ body {
   text-align: right;
 }
 
-.header img {
+.header__img {
   width: 100%;
 }
 
@@ -49,15 +49,15 @@ ul {
   padding: 0px;
 }
 
-li {
+li,button {
   list-style: none;
 }
 
-input,button{
+input{
   outline: none;
 }
 
-button {
+.tasks__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,7 +67,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.tasks__bth:hover {
   color: #3a3A3a;
 }
 
@@ -82,7 +82,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.tasks__text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -95,7 +95,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.tasks__text:focus {
   color: #333;
 }
 
@@ -110,7 +110,7 @@ input[type="text"]:focus {
 }
 
 /* Task list */
-li {
+.tasks__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -118,52 +118,51 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+.tasks__item {
+    vertical-align: middle;
+  }
 
-li > * {
-  vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
+.tasks__checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.tasks__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li >    input[type="text"] {
+.tasks__text {
   width: 226px;
 }
 
-button.tasks__btn_delete img {
+.tasks__img_btn {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.tasks__btn_delete img:hover {
+.tasks__img_btn:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.tasks__label-completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.tasks__item .tasks__text {
   display: none;
 }
 
-ul li.tasks__item_edit input[type=text] {
+.tasks__item_edit .tasks__text {
   display: inline-block;
   width: 224px;
 }
 
-ul li.tasks__item_edit label {
+.tasks__item_edit .tasks__label {
   display: none;
 }
